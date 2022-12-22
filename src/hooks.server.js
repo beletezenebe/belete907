@@ -1,9 +1,7 @@
 import {show_mango} from './db/mongo'
-show_mango().then(data => {
-  // do something with data
-  console.log(data)
-})
-.catch(error => {
- // do something with error
- console.log(error)
-})
+show_mango().then(
+  console.log("scucess")
+  ).catch((err) =>
+     console.log(err)
+    );
+
