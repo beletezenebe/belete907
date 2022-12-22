@@ -1,7 +1,21 @@
+<script>
+  export let data;
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
+
+
+
+  {#each data.posts as post}
+      <li>
+        
+          {post.title}
+        
+      </li>
+    {/each}
 
 <div class="text-column">
 	<h1>About this app</h1>
