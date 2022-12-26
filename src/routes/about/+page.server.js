@@ -1,9 +1,11 @@
-import {blog} from './db/model/blog';
- 
+
+import {blog} from './db/model/blog.js';
+import { json } from '@sveltejs/kit';
 export async function load() {
-  console.log(blog.find())
-  const datas = blog.find()
-  return {
-    post:datas
-  };
+   const b=await blog.find({});
+  //  console.log(b)
+    return {post:JSON.parse(JSON.stringify(b))}
+   
+  
+  
 }

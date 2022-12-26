@@ -1,7 +1,7 @@
-import {show_mango} from './db/mongo'
+import {show_mango} from '../db/mongo.js'
 show_mango().then(
   console.log("scucess")
-  ).catch((err) =>
-     console.log(err)
+  ).catch((e) =>
+     console.log(e)
     );
 
